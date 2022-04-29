@@ -2,7 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
 from sqlalchemy_mixins import AllFeaturesMixin
-import os
 
 Base = declarative_base()
 
@@ -13,11 +12,11 @@ class BaseModel(Base, AllFeaturesMixin):
 
 
 postgres_params = dict(
-    host=os.getenv('PG_HOST', 'localhost'),
-    port=int(os.getenv('PG_PORT', 5405)),
-    dbname=os.getenv('PG_DATABASE', 'weather_db'),
-    user=os.getenv('PG_USERNAME', 'postgres'),
-    password=os.getenv('PG_PASSWORD', 'postgres'),
+    host='localhost',
+    port=5405,
+    dbname='weather_db',
+    user='postgres',
+    password='postgres',
 )
 
 

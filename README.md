@@ -4,6 +4,8 @@
 - TG_TOKEN=5372114457:AAGrhSeD1eUGrKu1Ank-di5K83PWarDmPy4 - _токен нашего тг-бота_
 - YA_TOKEN= - _токен для тестового тарифа API Яндекс.Погоды_
 
+Для получения YA_TOKEN переходим по ссылке https://developer.tech.yandex.ru/services/ , оформляем тестовый доступ
+
 Находясь в папке с проектом выполняем 
 - `pip install -r requirements.txt`
 
