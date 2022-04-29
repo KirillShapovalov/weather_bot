@@ -16,6 +16,8 @@ services:
       - ./app:/usr/src/app/app
       - ./migrations:/usr/src/app/migrations
     restart: always
+    env_file:
+      - .env
 
   db:
     environment:
@@ -34,3 +36,5 @@ services:
     restart: always
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
+    env_file:
+      - .env
