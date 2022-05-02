@@ -19,7 +19,9 @@ https://dashboard.ngrok.com/get-started/setup
 - `./ngrok http 5000` для запуска туннеля на 5000 порте
 
 Чтобы телеграм присылал сообщения, указываем адрес. Для этого получаем {url} — адрес вида https://32515a83.ngrok.io, который отобразился в консоли ngrok. Для создания туннеля выполняем:
-- `curl --location --request POST 'https://api.telegram.org/bot5372114457:AAGrhSeD1eUGrKu1Ank-di5K83PWarDmPy4/setWebhook' --header 'Content-Type: application/json' --data-raw '{"url": https://1f46-95-24-28-52.eu.ngrok.io}'`
+
+- `curl --location --request POST 'https://api.telegram.org/bot5372114457:AAGrhSeD1eUGrKu1Ank-di5K83PWarDmPy4/setWebhook' --header 'Content-Type: application/json' --data-raw '{"url": {url}}'`
+
 
 ### Postgres
 Поднимаем БД в контейнере, для этого, находясь в папке с проектом, выполняем в терминале
